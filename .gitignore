@@ -7,3 +7,9 @@ calendar_agent/__pycache__/
 calendar_agent/*.pyc
 calendar_agent/credentials.json
 calendar_agent/token.json
+charts_agent/.venv/
+charts_agent/.env
+charts_agent/__pycache__/
+charts_agent/*.pyc
+charts_agent/credentials.json
+charts_agent/.vscode/
