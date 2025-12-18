@@ -1,0 +1,377 @@
+:root {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #0f172a;
+  background-color: #f4f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f4f6fb;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.app-header h1 {
+  margin: 0 0 6px 0;
+  font-size: 1.6rem;
+}
+
+.app-header p {
+  margin: 0;
+  color: #475569;
+}
+
+.status-pill {
+  border: 1px solid #cbd5f5;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-weight: 600;
+  color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.status-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.status-error {
+  color: #dc2626;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chat-sidebar {
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+}
+
+.panel {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.panel-hint {
+  margin: 8px 0 0 0;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.panel-meta {
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.upload-button {
+  border: 1px dashed #94a3b8;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: inline-flex;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.upload-button:hover {
+  border-color: #2563eb;
+}
+
+.session-indicator {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #e2e8f0;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.session-indicator.ready {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.columns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.column-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+  background-color: #f8fafc;
+}
+
+.column-card strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.column-type {
+  font-size: 0.85rem;
+  color: #2563eb;
+}
+
+.column-meta {
+  display: block;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 6px 8px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.chart-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chart-card h3 {
+  margin: 0;
+}
+
+.chart-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.chart-slot {
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.chart-type {
+  color: #475569;
+  border: 1px solid #cbd5f5;
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+}
+
+.chart-description {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.chart-placeholder {
+  margin: 24px 0;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.chart-preview {
+  background: white;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.control-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.control-field select {
+  border: 1px solid #cbd5f5;
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #fff;
+  font-size: 0.95rem;
+}
+
+.control-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.control-actions button {
+  border: none;
+  border-radius: 999px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.control-actions button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.chat-panel {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 600px;
+}
+
+.chat-log {
+  flex: 1;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-bubble {
+  border-radius: 12px;
+  padding: 8px 12px;
+  max-width: 90%;
+  background-color: #e2e8f0;
+}
+
+.chat-bubble strong {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  background-color: #c7d2fe;
+}
+
+.chat-bubble.assistant {
+  align-self: flex-start;
+  background-color: #f1f5f9;
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input input {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid #cbd5f5;
+  padding: 10px 16px;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  border: none;
+  border-radius: 999px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  padding: 0 18px;
+  cursor: pointer;
+}
+
+.chat-input button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1100px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-sidebar {
+    position: static;
+  }
+}
